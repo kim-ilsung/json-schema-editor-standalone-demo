@@ -2855,8 +2855,8 @@ var clipboard = {};
       var schema = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["f" /* convertTreeToSchema */])(this.$refs.tree.root);
       this.jsonSchemaContent = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify___default()(schema, null, 4);
       this.backupTreeData();
-      if (this.lasemessageevent !== null) {
-        this.lasemessageevent.source.postMessage({ 'func': 'UpdatedSchema', 'message': schema }, this.lasemessageevent.origin);
+      if (this.lastmessageevent !== null) {
+        this.lastmessageevent.source.postMessage({ 'func': 'UpdatedSchema', 'message': schema }, this.lastmessageevent.origin);
       }
     },
     removed: function removed() {
@@ -6245,4 +6245,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.b526141a09f9b1d9f2e6.js.map
+//# sourceMappingURL=app.22a00d8a50ded579cff5.js.map
