@@ -2,11 +2,24 @@
 <script type="text/javascript">
 var schema_data = '';
 
+window.addEventListener("message", receiveMessage, false);
+
+function receiveMessage(event)
+{
+//  if (event.origin !== "http://example.org:8080")
+//    return;
+
+  alert('got message');
+}
+
+
 function SetSchema(arg) {
   schema_data = arg;
   alert(arg);
 
 }
+
+
 
 </script>
 
