@@ -2700,7 +2700,13 @@ var clipboard = {};
     },
     ProcessWindowMessage: function ProcessWindowMessage(event) {
       if (typeof event.data.func === 'string' && event.data.func === 'SetSchema') {
-        alert(event.data.message);
+        try {
+          var schema = JSON.parse(event.data.message);
+          this.setSchemaToTree(schema);
+        } catch (err) {
+          console.log('load schema from request error: ' + err.message);
+          this.showSnackbar('Load schema from request error: ' + err.message, 4000);
+        }
       }
     },
     dragOverRule: function dragOverRule(dest, source) {
@@ -6234,4 +6240,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.a4efc6abd8387d4028cf.js.map
+//# sourceMappingURL=app.ea0983111adc46634d0a.js.map
