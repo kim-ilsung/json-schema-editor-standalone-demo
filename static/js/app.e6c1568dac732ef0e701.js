@@ -2471,8 +2471,6 @@ var clipboard = {};
     this.repository = __WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["repository"];
     this.setContainerHeight();
 
-    //window.parent.test({'kk':123});
-
     window.addEventListener('resize', function () {
       if (!_this.timeout) {
         _this.timeout = window.setTimeout(function () {
@@ -2480,6 +2478,9 @@ var clipboard = {};
           _this.setContainerHeight();
         }, 66);
       }
+    });
+    window.addEventListener('message', function (event) {
+      _this.ProcessWindowMessage(event);
     });
 
     window.setTimeout(this.setup, 1000);
@@ -2696,6 +2697,9 @@ var clipboard = {};
     },
     setContainerHeight: function setContainerHeight() {
       this.containerHeight = window.innerHeight - 60;
+    },
+    ProcessWindowMessage: function ProcessWindowMessage(event) {
+      alert(event.data);
     },
     dragOverRule: function dragOverRule(dest, source) {
       if (typeof dest.funcs.accept === 'function') return dest.funcs.accept(dest, source);
@@ -6228,4 +6232,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.dcac00f73abc6e739c90.js.map
+//# sourceMappingURL=app.e6c1568dac732ef0e701.js.map
