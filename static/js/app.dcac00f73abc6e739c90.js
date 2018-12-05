@@ -2471,7 +2471,7 @@ var clipboard = {};
     this.repository = __WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["repository"];
     this.setContainerHeight();
 
-    window.parent.test({'kk':123});
+    //window.parent.test({'kk':123});
 
     window.addEventListener('resize', function () {
       if (!_this.timeout) {
@@ -2486,7 +2486,6 @@ var clipboard = {};
   },
   mounted: function mounted() {
     this.$refs.splitPanel.sizeChanged(this);
-    alert('kkk');
   },
   data: function data() {
     return {
