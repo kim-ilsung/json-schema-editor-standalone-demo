@@ -2469,6 +2469,7 @@ var clipboard = {};
     var _this = this;
 
     this.repository = __WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["repository"];
+    this.lastmessageevent = null;
     this.setContainerHeight();
 
     window.addEventListener('resize', function () {
@@ -2700,6 +2701,7 @@ var clipboard = {};
     },
     ProcessWindowMessage: function ProcessWindowMessage(event) {
       if (typeof event.data.func === 'string' && event.data.func === 'SetSchema') {
+        this.lastmessageevent = event;
         try {
           var schema = event.data.message;
           this.setSchemaToTree(schema);
@@ -2853,6 +2855,9 @@ var clipboard = {};
       var schema = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["f" /* convertTreeToSchema */])(this.$refs.tree.root);
       this.jsonSchemaContent = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify___default()(schema, null, 4);
       this.backupTreeData();
+      if (this.lasemessageevent !== null) {
+        this.lasemessageevent.source.postMessage({ 'func': 'UpdatedSchema', 'message': schema }, this.lasemessageevent.origin);
+      }
     },
     removed: function removed() {
       this.jsonSchemaContent = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify___default()(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["f" /* convertTreeToSchema */])(this.$refs.tree.root), null, 4);
@@ -6240,4 +6245,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.7bfff7f10f876c084b48.js.map
+//# sourceMappingURL=app.b526141a09f9b1d9f2e6.js.map
