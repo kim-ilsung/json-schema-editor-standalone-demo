@@ -2699,7 +2699,9 @@ var clipboard = {};
       this.containerHeight = window.innerHeight - 60;
     },
     ProcessWindowMessage: function ProcessWindowMessage(event) {
-      alert(event.data);
+      if (typeof event.data.func === 'string' && event.data.func === 'SetSchema') {
+        alert(event.data.message);
+      }
     },
     dragOverRule: function dragOverRule(dest, source) {
       if (typeof dest.funcs.accept === 'function') return dest.funcs.accept(dest, source);
@@ -6232,4 +6234,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.e6c1568dac732ef0e701.js.map
+//# sourceMappingURL=app.a4efc6abd8387d4028cf.js.map
