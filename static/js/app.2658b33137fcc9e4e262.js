@@ -4334,14 +4334,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       this.items = [];
       console.log('test');
-      console.log(this);
-      var tmpenum = [];
+      console.log(this.json);
+      this.tmpenum = [];
       if (typeof this.node.value === 'undefined') {
-        tmpenum = this.node.value;
+        this.tmpenum = this.node.value;
       } else {
-        tmpenum = this.node.value.enum;
+        this.tmpenum = this.node.value.enum;
       }
-      tmpenum.forEach(function (item) {
+      this.tmpenum.forEach(function (item) {
         _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
       });
     },
@@ -6246,4 +6246,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.5ffe9bd27299aa964dd6.js.map
+//# sourceMappingURL=app.2658b33137fcc9e4e262.js.map
