@@ -4334,7 +4334,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       this.items = [];
       console.log('test2');
-      console.log(this.node.value[0]);
+      console.log(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(this.node.value[0]));
       if (typeof this.node.value.enum !== 'undefined') {
         this.node.value.enum.forEach(function (item) {
           _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
@@ -6242,4 +6242,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.0d23bc53a6969882bbec.js.map
+//# sourceMappingURL=app.af817311136598d6b6ea.js.map
