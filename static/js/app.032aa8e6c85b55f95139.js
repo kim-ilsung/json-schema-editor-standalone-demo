@@ -4339,6 +4339,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.node.value.enum.forEach(function (item) {
           _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
         });
+      } else {
+        this.node.value.forEach(function (item) {
+          _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
+        });
       }
     },
     add: function add() {
@@ -6242,4 +6246,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.af817311136598d6b6ea.js.map
+//# sourceMappingURL=app.032aa8e6c85b55f95139.js.map
