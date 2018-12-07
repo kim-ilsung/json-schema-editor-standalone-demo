@@ -4333,6 +4333,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       if (this.itemSchema) delete this.itemSchema.enum;
 
       this.items = [];
+      console.log('test');
+      console.log(this.node.value);
       this.node.value.enum.forEach(function (item) {
         _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
       });
@@ -6238,4 +6240,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.b734d308c164903cc10b.js.map
+//# sourceMappingURL=app.055eb113f5aafe1730b2.js.map
