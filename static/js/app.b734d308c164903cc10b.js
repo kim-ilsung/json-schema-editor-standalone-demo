@@ -2587,14 +2587,7 @@ var clipboard = {};
                 _context.t0 = _context['catch'](0);
 
               case 7:
-                if (__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["authentication"].currentUser === null) {
-                  _this2.signIn = false;
-                  _this2.$nextTick(function () {
-                    _this2.alert.title = 'User not sign in';
-                    _this2.alert.content = 'User can not retrieve and store custom schema, please sign in to access these features.';
-                    _this2.$refs.alert.open();
-                  });
-                }
+                _this2.signIn = false;
 
                 if (!_this2.signIn) {
                   _context.next = 44;
@@ -6245,4 +6238,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.22a00d8a50ded579cff5.js.map
+//# sourceMappingURL=app.b734d308c164903cc10b.js.map
