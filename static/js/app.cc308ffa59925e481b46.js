@@ -4340,9 +4340,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       if (this.itemSchema) delete this.itemSchema.enum;
 
       this.items = [];
-      this.node.value.enum.forEach(function (item) {
-        _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
-      });
+      console.log('test2');
+      console.log(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(this.node.value[0]));
+      if (typeof this.node.value.enum !== 'undefined') {
+        this.node.value.enum.forEach(function (item) {
+          _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
+        });
+      } else {
+        this.node.value.forEach(function (item) {
+          _this.items.push({ json: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(item), selected: true });
+        });
+      }
     },
     add: function add() {
       var _this2 = this;
@@ -4375,10 +4383,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     update: function update() {
       var _this3 = this;
 
-      this.node.value.enum.splice(0, this.node.value.enum.length);
-      this.items.forEach(function (item) {
-        if (item.selected) _this3.node.value.enum.push(JSON.parse(item.json));
-      });
+      if (typeof this.node.value.enum !== 'undefined') {
+        this.node.value.enum.splice(0, this.node.value.enum.length);
+        this.items.forEach(function (item) {
+          if (item.selected) _this3.node.value.enum.push(JSON.parse(item.json));
+        });
+      } else {
+        this.node.value.splice(0, this.node.value.length);
+        this.items.forEach(function (item) {
+          if (item.selected) _this3.node.value.push(JSON.parse(item.json));
+        });
+      }
       this.$parent.updated();
     }
   }
@@ -6245,4 +6260,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.22a00d8a50ded579cff5.js.map
+//# sourceMappingURL=app.cc308ffa59925e481b46.js.map
