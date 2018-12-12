@@ -5974,6 +5974,69 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "json-schema-editor"
   }, [_c('div', {
+    staticClass: "json-schema-content__buttons-container"
+  }, [_c('div', {
+    staticClass: "json-schema-content__button-bar"
+  }, [_c('md-button', {
+    staticClass: "md-dense json-schema-content__button",
+    nativeOn: {
+      "click": function($event) {
+        return _vm.newSchema($event)
+      }
+    }
+  }, [_vm._v("New Schema")]), _vm._v(" "), _c('md-button', {
+    staticClass: "md-dense json-schema-content__button",
+    attrs: {
+      "disabled": _vm.undoDisabled
+    },
+    nativeOn: {
+      "click": function($event) {
+        return _vm.undo($event)
+      }
+    }
+  }, [_vm._v("Undo")]), _vm._v(" "), _c('md-button', {
+    staticClass: "md-dense json-schema-content__button",
+    attrs: {
+      "disabled": _vm.redoDisabled
+    },
+    nativeOn: {
+      "click": function($event) {
+        return _vm.redo($event)
+      }
+    }
+  }, [_vm._v("Redo")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "json-schema-content__button-bar"
+  }, [_c('md-button', {
+    staticClass: "md-dense json-schema-content__button",
+    nativeOn: {
+      "click": function($event) {
+        return _vm.copyJsonSchemaToClipboard($event)
+      }
+    }
+  }, [_vm._v("Copy to Clipboard")]), _vm._v(" "), _c('md-button', {
+    staticClass: "md-dense json-schema-content__button",
+    nativeOn: {
+      "click": function($event) {
+        return _vm.downloadJsonSchemaToFile($event)
+      }
+    }
+  }, [_vm._v("Download to File")]), _vm._v(" "), _c('a', {
+    ref: "downloadLink",
+    staticStyle: {
+      "display": "none"
+    },
+    attrs: {
+      "download": _vm.downloadFilename,
+      "href": _vm.downloadLink
+    }
+  }), _vm._v(" "), _c('md-button', {
+    staticClass: "md-dense json-schema-content__button",
+    nativeOn: {
+      "click": function($event) {
+        return _vm.loadJsonSchemaFromFile($event)
+      }
+    }
+  }, [_vm._v("Load from File")])], 1)]), _vm._v(" "), _c('div', {
     staticClass: "container",
     style: (_vm.containerStyle)
   }, [_c('split-panel', {
@@ -6076,69 +6139,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "updated": _vm.updated
     }
   })], 1)])], 1)], 1)], 1), _vm._v(" "), _c('div', {
-    staticClass: "json-schema-content__buttons-container"
-  }, [_c('div', {
-    staticClass: "json-schema-content__button-bar"
-  }, [_c('md-button', {
-    staticClass: "md-dense json-schema-content__button",
-    nativeOn: {
-      "click": function($event) {
-        return _vm.newSchema($event)
-      }
-    }
-  }, [_vm._v("New Schema")]), _vm._v(" "), _c('md-button', {
-    staticClass: "md-dense json-schema-content__button",
-    attrs: {
-      "disabled": _vm.undoDisabled
-    },
-    nativeOn: {
-      "click": function($event) {
-        return _vm.undo($event)
-      }
-    }
-  }, [_vm._v("Undo")]), _vm._v(" "), _c('md-button', {
-    staticClass: "md-dense json-schema-content__button",
-    attrs: {
-      "disabled": _vm.redoDisabled
-    },
-    nativeOn: {
-      "click": function($event) {
-        return _vm.redo($event)
-      }
-    }
-  }, [_vm._v("Redo")])], 1), _vm._v(" "), _c('div', {
-    staticClass: "json-schema-content__button-bar"
-  }, [_c('md-button', {
-    staticClass: "md-dense json-schema-content__button",
-    nativeOn: {
-      "click": function($event) {
-        return _vm.copyJsonSchemaToClipboard($event)
-      }
-    }
-  }, [_vm._v("Copy to Clipboard")]), _vm._v(" "), _c('md-button', {
-    staticClass: "md-dense json-schema-content__button",
-    nativeOn: {
-      "click": function($event) {
-        return _vm.downloadJsonSchemaToFile($event)
-      }
-    }
-  }, [_vm._v("Download to File")]), _vm._v(" "), _c('a', {
-    ref: "downloadLink",
-    staticStyle: {
-      "display": "none"
-    },
-    attrs: {
-      "download": _vm.downloadFilename,
-      "href": _vm.downloadLink
-    }
-  }), _vm._v(" "), _c('md-button', {
-    staticClass: "md-dense json-schema-content__button",
-    nativeOn: {
-      "click": function($event) {
-        return _vm.loadJsonSchemaFromFile($event)
-      }
-    }
-  }, [_vm._v("Load from File")])], 1), _vm._v(" "), _c('div', {
     staticClass: "json-schema-content__panel",
     attrs: {
       "slot": "panel2"
@@ -6169,7 +6169,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.jsonSchemaContent = $event.target.value
       }
     }
-  })])])])]), _vm._v(" "), _c('context-menu', {
+  })])])]), _vm._v(" "), _c('context-menu', {
     ref: "context",
     attrs: {
       "menu": _vm.menuData
@@ -6260,4 +6260,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.be4b60b5cad8f93bc0c8.js.map
+//# sourceMappingURL=app.bc8be6d29670eafbe45f.js.map
