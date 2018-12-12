@@ -6138,7 +6138,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "updated": _vm.updated
     }
-  })], 1)])], 1)], 1), _vm._v(" "), _c('div', {
+  })], 1)])], 1), _vm._v(" "), _c('split-panel', {
+    attrs: {
+      "slot": "panel3",
+      "orientation": "horizontal",
+      "show-border": false,
+      "init-position": 400
+    },
+    slot: "panel3"
+  }, [_c('div', {
     staticClass: "json-schema-content__panel",
     attrs: {
       "slot": "panel3"
@@ -6169,7 +6177,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.jsonSchemaContent = $event.target.value
       }
     }
-  })])])])], 1), _vm._v(" "), _c('context-menu', {
+  })])])])])], 1)], 1), _vm._v(" "), _c('context-menu', {
     ref: "context",
     attrs: {
       "menu": _vm.menuData
@@ -6260,4 +6268,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.e60d443bae66bc0b10ad.js.map
+//# sourceMappingURL=app.a774b166a96359a284c2.js.map
