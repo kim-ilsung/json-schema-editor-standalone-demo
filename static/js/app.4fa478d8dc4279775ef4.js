@@ -6140,17 +6140,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1)])], 1), _vm._v(" "), _c('split-panel', {
     attrs: {
-      "slot": "panel3",
       "orientation": "horizontal",
+      "init-position": 180,
       "show-border": false
-    },
-    slot: "panel3"
+    }
   }, [_c('div', {
     staticClass: "json-schema-content__panel",
     attrs: {
-      "slot": "panel4"
+      "slot": "panel3"
     },
-    slot: "panel4"
+    slot: "panel3"
   }, [_c('div', {
     staticClass: "json-schema-content__container"
   }, [_c('div', {
@@ -6267,4 +6266,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.4ae33cd988b6867a76f8.js.map
+//# sourceMappingURL=app.4fa478d8dc4279775ef4.js.map
