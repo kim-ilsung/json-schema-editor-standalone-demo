@@ -6145,7 +6145,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     slot: "panel3"
   }, [_c('div', {
-    staticClass: "json-schema-content__container"
+    staticClass: "json-schema-content__container",
+    staticStyle: {
+      "display": "none"
+    }
   }, [_c('div', {
     staticClass: "json-schema-content__textarea-container"
   }, [_c('textarea', {
@@ -6260,4 +6263,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.e60d443bae66bc0b10ad.js.map
+//# sourceMappingURL=app.4be0be3d6e8badff7c1e.js.map
