@@ -1061,8 +1061,7 @@ var JsonSchemaComponent = function JsonSchemaComponent(tooltip) {
   this.name = 'schema';
   this.tooltip = tooltip;
   this.icon = 'jsonSchema';
-  this.value = {};
-  this.valueSchema = {
+  this.value = {
     type: 'object',
     properties: {
       address: {
@@ -1118,6 +1117,15 @@ var JsonSchemaComponent = function JsonSchemaComponent(tooltip) {
       },
       service_phones: {
         type: 'array'
+      }
+    }
+  };
+  this.valueSchema = {
+    type: 'object',
+    properties: {
+      description: {
+        type: 'string',
+        format: 'textarea'
       }
     }
   };
@@ -5436,6 +5444,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "json-schema-content__container"
   }, [_c('div', {
+    staticClass: "json-schema-content__textarea-container",
+    staticStyle: {
+      "display": "none"
+    }
+  }, [_c('textarea', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.jsonSchemaContent),
+      expression: "jsonSchemaContent"
+    }],
+    ref: "jsonSchemaContent",
+    staticClass: "json-schema-content__textarea",
+    attrs: {
+      "readonly": "readonly"
+    },
+    domProps: {
+      "value": (_vm.jsonSchemaContent)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.jsonSchemaContent = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
     staticClass: "json-schema-content__buttons-container"
   }, [_c('div', {
     staticClass: "json-schema-content__button-bar"
@@ -6253,4 +6287,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.22d8de431771140e6b1c.js.map
+//# sourceMappingURL=app.51bde9d61ba4246ead86.js.map
