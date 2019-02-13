@@ -1061,65 +1061,7 @@ var JsonSchemaComponent = function JsonSchemaComponent(tooltip) {
   this.name = 'schema';
   this.tooltip = tooltip;
   this.icon = 'jsonSchema';
-  this.value = {
-    type: 'object',
-    properties: {
-      address: {
-        type: 'object',
-        properties: {
-          address_1: {
-            type: 'string'
-          },
-          address_2: {
-            type: 'string'
-          },
-          admin: {
-            type: 'string'
-          },
-          city: {
-            type: 'string'
-          },
-          country_iso: {
-            type: 'string'
-          },
-          country_name: {
-            type: 'string'
-          },
-          postal_code: {
-            type: 'string'
-          }
-        },
-        required: true
-      },
-      default_picture: {
-        type: 'string'
-      },
-      default_thumbnail_picture: {
-        type: 'string'
-      },
-      description: {
-        type: 'string'
-      },
-      emergency_phones: {
-        type: 'array',
-        items: {
-          type: 'object',
-          properties: {
-            name: {
-              type: 'string'
-            },
-            number: {
-              type: 'string'
-            }
-          },
-          required: true
-        }
-      },
-      service_phones: {
-        type: 'array'
-      }
-    }
-  };
+  this.value = {};
   this.valueSchema = {
     type: 'object',
     properties: {
@@ -6287,4 +6229,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.51bde9d61ba4246ead86.js.map
+//# sourceMappingURL=app.01723445bec5863c99e8.js.map
