@@ -2858,8 +2858,14 @@ var clipboard = {};
       if (e === true) {
         console.log('Expert mode ON');
         file.href = 'expert.css';
+        file.id = 'expert-style';
+        var element = document.getElementById('simple-style');
+        element.parentNode.removeChild(element);
       } else {
         file.href = 'simple.css';
+        file.id = 'simple-style';
+        var _element = document.getElementById('expert-style');
+        _element.parentNode.removeChild(_element);
       }
       document.head.appendChild(file);
     },
@@ -6294,4 +6300,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.717771b0cb2b309234ee.js.map
+//# sourceMappingURL=app.3a410db85d4f3adffe2e.js.map
