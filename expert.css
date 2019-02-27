@@ -35,3 +35,12 @@
   .component-node[title="Definitions of reusable schema"] {
     display: block!important;
   }
+
+  .component-node[title="List properties of object"] {
+    display: block!important;
+  }
+
+  .component-node[title="Type object"] {
+    display: block!important;
+  }
+
