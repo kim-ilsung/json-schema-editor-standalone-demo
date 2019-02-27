@@ -1786,7 +1786,7 @@ function convertSchemaToTree(schema, name) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__componentData__ = __webpack_require__(106);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__componentData__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__treeData__ = __webpack_require__(132);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_3__treeData__["a"]; });
+/* unused harmony reexport treeData */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menuData__ = __webpack_require__(131);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_4__menuData__["a"]; });
 
@@ -1924,7 +1924,7 @@ var menuData = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return treeData; });
+/* unused harmony export treeData */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components__ = __webpack_require__(22);
 
 
@@ -2886,9 +2886,11 @@ var clipboard = {};
     },
     newSchemaConfirmed: function newSchemaConfirmed(confirmResult) {
       if (!confirmResult) return;
-      this.setTree(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]);
+      var schema = JSON.parse('{"$schema": "http://json-schema.org/draft-03/schema", "required": true, "type": "object", "id": "#", "properties": {"Name": {"required": true, "type": "string", "id": "name"}}}');
+      var treeData1 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["e" /* convertSchemaToTree */])(schema);
+      this.setTree(treeData1);
 
-      this.treeDataBackups = [__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]];
+      this.treeDataBackups = [treeData1];
       this.currentVersionNo = 0;
     },
     saveSchema: function saveSchema() {
@@ -3190,8 +3192,7 @@ var clipboard = {};
           var reader = new FileReader();
           reader.onload = function () {
             var _ref = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee6(e) {
-              var schema, _treeData;
-
+              var schema, treeData;
               return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee6$(_context6) {
                 while (1) {
                   switch (_context6.prev = _context6.next) {
@@ -3206,14 +3207,14 @@ var clipboard = {};
                         break;
                       }
 
-                      _treeData = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["e" /* convertSchemaToTree */])(schema);
+                      treeData = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["e" /* convertSchemaToTree */])(schema);
                       _context6.next = 7;
-                      return _this9.repository.saveSchema(schema, _treeData.name);
+                      return _this9.repository.saveSchema(schema, treeData.name);
 
                     case 7:
-                      if (_this9.schemaList.indexOf(_treeData.name) === -1) _this9.schemaList.push(_treeData.name);
+                      if (_this9.schemaList.indexOf(treeData.name) === -1) _this9.schemaList.push(treeData.name);
 
-                      _this9.$refs.userSchemas.append(_treeData);
+                      _this9.$refs.userSchemas.append(treeData);
                       _context6.next = 12;
                       break;
 
@@ -6272,4 +6273,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.75467830f0ffa6c7ab52.js.map
+//# sourceMappingURL=app.6b27206757ede88f406c.js.map
