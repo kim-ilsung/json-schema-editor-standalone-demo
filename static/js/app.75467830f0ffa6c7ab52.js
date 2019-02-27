@@ -2886,7 +2886,6 @@ var clipboard = {};
     },
     newSchemaConfirmed: function newSchemaConfirmed(confirmResult) {
       if (!confirmResult) return;
-      console.log(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]);
       this.setTree(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]);
 
       this.treeDataBackups = [__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]];
@@ -3200,42 +3199,44 @@ var clipboard = {};
                       _context6.prev = 0;
                       schema = JSON.parse(e.target.result);
 
+                      console.log(e.target.result);
+
                       if (!_this9.multipleUpload) {
-                        _context6.next = 10;
+                        _context6.next = 11;
                         break;
                       }
 
                       _treeData = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["e" /* convertSchemaToTree */])(schema);
-                      _context6.next = 6;
+                      _context6.next = 7;
                       return _this9.repository.saveSchema(schema, _treeData.name);
 
-                    case 6:
+                    case 7:
                       if (_this9.schemaList.indexOf(_treeData.name) === -1) _this9.schemaList.push(_treeData.name);
 
                       _this9.$refs.userSchemas.append(_treeData);
-                      _context6.next = 11;
+                      _context6.next = 12;
                       break;
-
-                    case 10:
-                      _this9.setSchemaToTree(schema);
 
                     case 11:
-                      _context6.next = 17;
+                      _this9.setSchemaToTree(schema);
+
+                    case 12:
+                      _context6.next = 18;
                       break;
 
-                    case 13:
-                      _context6.prev = 13;
+                    case 14:
+                      _context6.prev = 14;
                       _context6.t0 = _context6['catch'](0);
 
                       console.log('load schema from file error: ' + _context6.t0.message);
                       _this9.showSnackbar('Load schema from file error: ' + _context6.t0.message, 4000);
 
-                    case 17:
+                    case 18:
                     case 'end':
                       return _context6.stop();
                   }
                 }
-              }, _callee6, _this9, [[0, 13]]);
+              }, _callee6, _this9, [[0, 14]]);
             }));
 
             return function (_x) {
@@ -6271,4 +6272,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.9e192797321eeff4a817.js.map
+//# sourceMappingURL=app.75467830f0ffa6c7ab52.js.map
