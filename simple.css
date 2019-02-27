@@ -1,37 +1,37 @@
   .component-node[title="Data must be valid against any of the given subschemas"] {
-    display: none;
+    display: none!important;
   }
   
 	
   .component-node[title="List dependencies between properties"] {
-    display: none;
+    display: none!important;
   }
 	
   .component-node[title="List of properties which specific property depend on"] {
-    display: none;
+    display: none!important;
   }
 	
   .component-node[title="Data must be valid against all of the given subschemas"] {
-    display: none;
+    display: none!important;
   }
 	
   .component-node[title="Data must be valid against any of the given subschemas"] {
-    display: none;
+    display: none!important;
   }
 
   .component-node[title="Data must be valid against exactly one of the given subschemas"] {
-    display: none;
+    display: none!important;
   }
 
   .component-node[title="Data must not be valid against all of the given subschemas"] {
-    display: none;
+    display: none!important;
   }
 	
 	
   .component-node[title="Reference to external schema"] {
-    display: none;
+    display: none!important;
   }
 	
   .component-node[title="Definitions of reusable schema"] {
-    display: none;
+    display: none!important;
   }

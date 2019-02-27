@@ -2857,11 +2857,11 @@ var clipboard = {};
       file.rel = 'stylesheet';
       if (e === true) {
         console.log('Expert mode ON');
-        window.location.reload();
+        file.href = 'expert.css';
       } else {
         file.href = 'simple.css';
-        document.head.appendChild(file);
       }
+      document.head.appendChild(file);
     },
     updated: function updated() {
       var schema = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["f" /* convertTreeToSchema */])(this.$refs.tree.root);
@@ -6294,4 +6294,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.44bdc6a4a0bbe321e429.js.map
+//# sourceMappingURL=app.717771b0cb2b309234ee.js.map
