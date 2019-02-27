@@ -2886,6 +2886,7 @@ var clipboard = {};
     },
     newSchemaConfirmed: function newSchemaConfirmed(confirmResult) {
       if (!confirmResult) return;
+      console.log(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]);
       this.setTree(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]);
 
       this.treeDataBackups = [__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["g" /* treeData */]];
@@ -6270,4 +6271,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.afa36d81d41520b60c36.js.map
+//# sourceMappingURL=app.9e192797321eeff4a817.js.map
