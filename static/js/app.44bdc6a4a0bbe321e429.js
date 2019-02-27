@@ -2857,17 +2857,11 @@ var clipboard = {};
       file.rel = 'stylesheet';
       if (e === true) {
         console.log('Expert mode ON');
-        file.href = 'expert.css';
-        file.id = 'expert-style';
-        var element = document.getElementById('simple-style');
-        element.parentNode.removeChild(element);
+        window.location.reload();
       } else {
         file.href = 'simple.css';
-        file.id = 'simple-style';
-        var _element = document.getElementById('expert-style');
-        _element.parentNode.removeChild(_element);
+        document.head.appendChild(file);
       }
-      document.head.appendChild(file);
     },
     updated: function updated() {
       var schema = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["f" /* convertTreeToSchema */])(this.$refs.tree.root);
@@ -6300,4 +6294,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.3a410db85d4f3adffe2e.js.map
+//# sourceMappingURL=app.44bdc6a4a0bbe321e429.js.map
