@@ -6060,14 +6060,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Load from File")]), _vm._v(" "), _c('md-checkbox', {
     staticClass: "md-primary",
     staticStyle: {
-      "margin": "7px 0 0 0"
+      "margin": "10px 0 0 0"
     },
     on: {
       "change": function($event) {
         _vm.modeChange($event)
       }
     }
-  }, [_vm._v("Expert")])], 1)]), _vm._v(" "), _c('div', {
+  }, [_vm._v("EXPERT")])], 1)]), _vm._v(" "), _c('div', {
     staticClass: "container",
     style: (_vm.containerStyle)
   }, [_c('split-panel', {
@@ -6294,4 +6294,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.ee1921d03a83ca3ce972.js.map
+//# sourceMappingURL=app.97d79a2e670c01e2a959.js.map
