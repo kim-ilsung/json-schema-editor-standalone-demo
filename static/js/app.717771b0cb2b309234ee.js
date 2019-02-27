@@ -2853,9 +2853,15 @@ var clipboard = {};
       this.updated();
     },
     modeChange: function modeChange(e) {
+      var file = document.createElement('link');
+      file.rel = 'stylesheet';
       if (e === true) {
         console.log('Expert mode ON');
+        file.href = 'expert.css';
+      } else {
+        file.href = 'simple.css';
       }
+      document.head.appendChild(file);
     },
     updated: function updated() {
       var schema = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10__json_schema_editor__["f" /* convertTreeToSchema */])(this.$refs.tree.root);
@@ -6288,4 +6294,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[134]);
-//# sourceMappingURL=app.756b3cd1c5a5af04b124.js.map
+//# sourceMappingURL=app.717771b0cb2b309234ee.js.map
